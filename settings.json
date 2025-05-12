@@ -1,82 +1,71 @@
 {
-    // --- Editor Settings ---
-    // Font settings
-    "editor.fontFamily": "Monaspace Neon, Monaspace Radon, Monaspace Xenon, Monaspace Krypton, Monaspace Argon, Geist Mono, JetBrains Mono, Fira Code, MonoLisa Trial",
-    "editor.fontSize": 14,
-    "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
-    "editor.inlineSuggest.fontFamily": "Monaspace Krypton", // Font for AI suggestions
+  // --- Editor Settings ---
+  // Font settings
+  "editor.fontFamily": "Geist Mono, Monaspace Neon, Monaspace Radon, Monaspace Xenon, Monaspace Krypton, Monaspace Argon, JetBrains Mono, Fira Code, MonoLisa Trial",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
+  "editor.inlineSuggest.fontFamily": "Monaspace Krypton", // Font for AI suggestions
 
-    // Formatting and Saving
-    "editor.formatOnSave": true,
+  // Formatting and Saving
+  "editor.formatOnSave": true,
 
-    // Display and Layout
-    "editor.wordWrap": "on", // Wrap long lines
-    "editor.renderWhitespace": "boundary", // Show trailing/leading whitespace
-    "editor.guides.highlightActiveIndentation": true, // Highlight current indentation level
-    "editor.minimap.enabled": false, // Hide the minimap
-    "editor.stickyScroll.enabled": false, // Disable sticky scroll
+  // Display and Layout
+  "editor.wordWrap": "on", // Wrap long lines
+  "editor.renderWhitespace": "trailing", // Show trailing/leading whitespace
+  "editor.guides.highlightActiveIndentation": true, // Highlight current indentation level
+  "editor.minimap.enabled": false, // Hide the minimap
+  "editor.stickyScroll.enabled": true, // Disable sticky scroll
 
-    // --- File Settings ---
-    "files.autoSave": "onFocusChange", // Auto-save files when focus changes
-    "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
-    "files.insertFinalNewline": true, // Ensure final newline on save
-    "explorer.fileNesting.enabled": true, // Group related files in explorer
+  // --- File Settings ---
+  "files.autoSave": "onFocusChange", // Auto-save files when focus changes
+  "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
+  "files.insertFinalNewline": true, // Ensure final newline on save
+  "explorer.fileNesting.enabled": true, // Group related files in explorer
 
-    // --- Workbench Settings ---
-    // Appearance
-    "workbench.colorTheme": "Deep Blue",
-    "workbench.iconTheme": "helium-icon-theme", // Move activity bar to the top
-    "workbench.navigationControl.enabled": false, // Hide navigation controls
-    "workbench.layoutControl.enabled": false, // Hide layout controls
-    "window.commandCenter": false, // Hide the command center
-    "workbench.startupEditor": "none", // Don't open any editor on startup
+  // --- Workbench Settings ---
+  // Appearance
+  "workbench.colorTheme": "SynthWave84", // Move activity bar to the top
+  "workbench.navigationControl.enabled": false, // Hide navigation controls
+  "workbench.layoutControl.enabled": false, // Hide layout controls
+  "window.commandCenter": false, // Hide the command center
+  "workbench.startupEditor": "none", // Don't open any editor on startup
 
-    // Confirmation Dialogs
-    "explorer.confirmDragAndDrop": false, // Disable drag and drop confirmation
-    "explorer.confirmDelete": false, // Disable delete confirmation
+  // Confirmation Dialogs
+  "explorer.confirmDragAndDrop": false, // Disable drag and drop confirmation
+  "explorer.confirmDelete": false, // Disable delete confirmation
 
-    // --- Terminal Settings ---
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontLigatures": true,
+  // --- Terminal Settings ---
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontLigatures": true,
 
-    // --- Git Settings ---
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "git.autofetch": true,
+  // --- Git Settings ---
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
 
-    // --- Extension Settings ---
-    // Prettier
-    "prettier.configPath": ".prettierrc.json",
+  // --- Extension Settings ---
+  // Prettier
+  "prettier.configPath": ".prettierrc.json",
 
-    // TypeScript
-    "typescript.updateImportsOnFileMove.enabled": "always",
+  // TypeScript
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
-    // Codeium
-    "codeium.enableCodeLens": false,
+  // --- Language Specific Settings ---
+  // Default Formatter (using Prettier)
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    // GitHub Copilot / Chat Agent
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "github.copilot.chat.codesearch.enabled": true,
-    "github.copilot.chat.agent.thinkingTool": true,
-    "chat.agent.enabled": true,
-
-    // --- Language Specific Settings ---
-    // Default Formatter (using Prettier)
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[scss]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    // --- Other ---
-    "json.schemas": [
-
-    ] // Keep this, might be used by extensions or user
-  }
+  // --- Other ---
+  "json.schemas": [],
+  "workbench.activityBar.location": "top" // Keep this, might be used by extensions or user
+}
