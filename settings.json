@@ -1,10 +1,9 @@
 {
   // --- Editor Settings ---
   // Font settings
-  "editor.fontFamily": "Geist Mono, Monaspace Neon, Monaspace Radon, Monaspace Xenon, Monaspace Krypton, Monaspace Argon, JetBrains Mono, Fira Code, MonoLisa Trial",
-  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 16,
   "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
-  "editor.inlineSuggest.fontFamily": "Monaspace Krypton", // Font for AI suggestions
 
   // Formatting and Saving
   "editor.formatOnSave": true,
@@ -29,10 +28,9 @@
 
   // --- Workbench Settings ---
   // Appearance
-  "workbench.colorTheme": "SynthWave84", // Move activity bar to the top
+  "workbench.colorTheme": "Monokai Classic", // Move activity bar to the top
   "workbench.navigationControl.enabled": false, // Hide navigation controls
   "workbench.layoutControl.enabled": false, // Hide layout controls
-  "window.commandCenter": false, // Hide the command center
   "workbench.startupEditor": "none", // Don't open any editor on startup
 
   // Confirmation Dialogs
@@ -41,7 +39,11 @@
 
   // --- Terminal Settings ---
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.fontLigatures": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.scrollback": 1000,
 
   // --- Git Settings ---
   "git.enableSmartCommit": true,
