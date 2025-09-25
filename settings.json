@@ -1,77 +1,33 @@
 {
-  // --- Editor Settings ---
-  // Font settings
-  "editor.fontFamily": "Cascadia Code, Fira Code, JetBrains Mono, Menlo",
-  "editor.fontSize": 16,
-  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
-
-  // Formatting and Saving
-  "editor.formatOnSave": true,
-
-  // Explorer settings
-  "workbench.activityBar.location": "top",
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.hidesExplorerArrows": true,
-
-  // Display and Layout
-  "editor.wordWrap": "on", // Wrap long lines
-  "editor.renderWhitespace": "trailing", // Show trailing/leading whitespace
-  "editor.guides.highlightActiveIndentation": true, // Highlight current indentation level
-  "editor.minimap.enabled": false, // Hide the minimap
-  "editor.stickyScroll.enabled": true, // Disable sticky scroll
-
-  // --- File Settings ---
-  "files.autoSave": "onFocusChange", // Auto-save files when focus changes
-  "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
-  "files.insertFinalNewline": true, // Ensure final newline on save
-  "explorer.fileNesting.enabled": true, // Group related files in explorer
-
-  // --- Workbench Settings ---
-  // Appearance
-  "workbench.colorTheme": "Monokai Classic", // Move activity bar to the top
-  "workbench.navigationControl.enabled": false, // Hide navigation controls
-  "workbench.layoutControl.enabled": false, // Hide layout controls
-  "workbench.startupEditor": "none", // Don't open any editor on startup
-
-  // Confirmation Dialogs
-  "explorer.confirmDragAndDrop": false, // Disable drag and drop confirmation
-  "explorer.confirmDelete": false, // Disable delete confirmation
-
-  // --- Terminal Settings ---
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.cursorWidth": 2,
-  "terminal.integrated.scrollback": 1000,
-
-  // --- Git Settings ---
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autofetch": true,
-
-  // --- Extension Settings ---
-  // Prettier
-  "prettier.configPath": ".prettierrc.json",
-
-  // TypeScript
-  "typescript.updateImportsOnFileMove.enabled": "always",
-
-  // --- Language Specific Settings ---
-  // Default Formatter (using Prettier)
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "autosave": "on_focus_change",
+  "features": {
+    "edit_prediction_provider": "copilot"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "theme": "Gruvbox Dark Hard",
+  "agent": {
+    "play_sound_when_agent_done": true
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "base_keymap": "VSCode",
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
+
+  // Remove the < > buttons from the tab bar
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
   },
 
-  // --- Other ---
-  "json.schemas": []
+  // Show file type icons in the tab bar. Also color them according to the
+  // git status.
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+
+  // Decrease the horizontal indent size of files & folders in the project
+  // panel to avoid horizontal scrolling
+  "project_panel": {
+    "indent_size": 14
+  }
 }
