@@ -1,81 +1,252 @@
 {
-  // --- Editor Settings ---
-  // Font settings
-  "editor.fontFamily": "'Monaspace Neon', 'Monaspace Krypton', Menlo, 'Fira Code', Menlo, JetBrains Mono, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
+  // === APPARENCE GÉNÉRALE ===
+  "theme": "Catppuccin Mocha",
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "ui_font_family": "Geist Mono",
+  "ui_font_size": 16,
+  "ui_font_weight": 500,
 
-  // Formatting and Saving
-  "editor.formatOnSave": true,
-
-  // Explorer settings
-  "workbench.activityBar.location": "top",
-  "workbench.iconTheme": "catppuccin-frappe",
-  "material-icon-theme.hidesExplorerArrows": true,
-
-  // Display and Layout
-  "editor.wordWrap": "on", // Wrap long lines
-  "editor.renderWhitespace": "trailing", // Show trailing/leading whitespace
-  "editor.guides.highlightActiveIndentation": true, // Highlight current indentation level
-  "editor.minimap.enabled": false, // Hide the minimap
-  "editor.stickyScroll.enabled": true, // Disable sticky scroll
-
-  // --- File Settings ---
-  "files.autoSave": "onFocusChange", // Auto-save files when focus changes
-  "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
-  "files.insertFinalNewline": true, // Ensure final newline on save
-  "explorer.fileNesting.enabled": true, // Move activity bar to the top
-  "workbench.navigationControl.enabled": false, // Hide navigation controls
-  "workbench.layoutControl.enabled": false, // Hide layout controls
-  "workbench.startupEditor": "none", // Don't open any editor on startup
-
-  // Confirmation Dialogs
-  "explorer.confirmDragAndDrop": false, // Disable drag and drop confirmation
-  "explorer.confirmDelete": false, // Disable delete confirmation
-
-  // --- Terminal Settings ---
-  "terminal.integrated.fontFamily": "Monaspace Krypton",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.cursorWidth": 3,
-  "terminal.integrated.scrollback": 1000,
-
-  // --- Git Settings ---
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autofetch": true,
-
-  // --- Extension Settings ---
-  // Prettier
-  "prettier.configPath": "prettier.config.js",
-
-  // TypeScript
-  "typescript.updateImportsOnFileMove.enabled": "always",
-
-  // --- Language Specific Settings ---
-  // Default Formatter (using Prettier)
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // === POLICE DU CODE ===
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 16,
+  "buffer_font_weight": 400,
+  "buffer_line_height": {
+    "custom": 1.6
   },
 
-  // --- Other ---
-  "json.schemas": [
-  
-  ],
-  "terminal.integrated.stickyScroll.enabled": false,
-  "workbench.colorTheme": "Catppuccin Macchiato",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // === LIGATURES & STYLE ===
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true
   },
-  "workbench.panel.showLabels": false
+
+  // === CURSEUR ===
+  "cursor_blink": true,
+  "cursor_shape": "underline",
+
+  // === SAUVEGARDE ===
+  "autosave": "on_focus_change",
+  "format_on_save": "on",
+
+  // === ÉDITEUR ===
+  "show_whitespaces": "selection",
+  "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 100,
+  "tab_size": 2,
+  "hard_tabs": false,
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+  "show_wrap_guides": false,
+  "wrap_guides": [80, 100],
+
+  // === SCROLLBAR MINIMALISTE ===
+  "scrollbar": {
+    "show": "auto",
+    "cursors": false,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": false,
+    "diagnostics": "all"
+  },
+
+  // === GUTTER (COLONNE DE GAUCHE) ===
+  "gutter": {
+    "line_numbers": true,
+    "runnables": true,
+    "folds": true
+  },
+
+  // === INDENTATION ===
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 2,
+    "coloring": "indent_aware",
+    "background_coloring": "disabled"
+  },
+
+  // === INLAY HINTS (ANNOTATIONS INLINE) ===
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
+  },
+
+  // === TERMINAL À DROITE ===
+  "terminal": {
+    "dock": "right",
+    "default_width": 450,
+    "font_family": "JetBrains Mono",
+    "font_size": 13,
+    "line_height": {
+      "custom": 1.4
+    },
+    "blinking": "off",
+    "shell": "system",
+    "working_directory": "current_project_directory",
+    "copy_on_select": true
+  },
+
+  // === BARRE D'ONGLETS ===
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "close_position": "right"
+  },
+
+  // === PANNEAU PROJET ===
+  "project_panel": {
+    "button": true,
+    "dock": "left",
+    "default_width": 240,
+    "indent_size": 16,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true,
+    "scrollbar": {
+      "show": "never"
+    },
+    "git_status": true,
+    "file_icons": true
+  },
+
+  // === PANNEAU OUTLINE ===
+  "outline_panel": {
+    "dock": "right",
+    "button": true
+  },
+
+  // === COLLABORATION ===
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+
+  // === ASSISTANT / AGENT ===
+  /* Duplicated key auto-commented: "agent": {
+    "enabled": true,
+    "button": true,
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-20250514"
+    },
+    "version": "2"
+  }, */
+  "agent": {
+    "play_sound_when_agent_done": true
+  },
+
+  // === KEYMAP ===
+  "base_keymap": "VSCode",
+
+  // === RECHERCHE ===
+  "search": {
+    "whole_word": false,
+    "case_sensitive": false,
+    "include_ignored": false,
+    "regex": false
+  },
+
+  // === TELEMETRY (désactivé pour la vie privée) ===
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  // === LSP & DIAGNOSTICS ===
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true
+    }
+  },
+
+  // === AUTO-UPDATES ===
+  "auto_update": true,
+
+  // === GIT ===
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 600
+    }
+  },
+
+  // === JOURNAL (notes quotidiennes) ===
+  "journal": {
+    "path": "~/.zed-journal",
+    "hour_format": "hour24"
+  },
+
+  // === PRÉVISUALISATION ===
+  "preview_tabs": {
+    "enabled": true,
+    "enable_preview_from_file_finder": true,
+    "enable_preview_from_code_navigation": true
+  },
+
+  // === CENTERED LAYOUT (mode zen) ===
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+
+  // === ANIMATIONS FLUIDES ===
+  "scroll_sensitivity": 1.0,
+  "vertical_scroll_margin": 5,
+
+  // === FENÊTRE ===
+  "when_closing_with_no_tabs": "keep_window_open",
+  "confirm_quit": true,
+  "restore_on_startup": "last_session",
+
+  // === LANGAGES SPÉCIFIQUES ===
+  "languages": {
+    "TypeScript": {
+      "tab_size": 2,
+      "format_on_save": "on"
+    },
+    "JavaScript": {
+      "tab_size": 2,
+      "format_on_save": "on"
+    },
+    "Python": {
+      "tab_size": 4,
+      "format_on_save": "on"
+    },
+    "Rust": {
+      "tab_size": 4,
+      "format_on_save": "on"
+    },
+    "JSON": {
+      "tab_size": 2
+    },
+    "YAML": {
+      "tab_size": 2
+    },
+    "Markdown": {
+      "soft_wrap": "editor_width",
+      "show_wrap_guides": false
+    }
+  },
+
+  // === LSP ===
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "checkOnSave": {
+          "command": "clippy"
+        }
+      }
+    }
+  }
 }
