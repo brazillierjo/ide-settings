@@ -1,252 +1,71 @@
 {
-  // === APPARENCE GÉNÉRALE ===
-  "theme": "Catppuccin Mocha",
-  "icon_theme": "JetBrains New UI Icons (Dark)",
-  "ui_font_family": "Geist Mono",
-  "ui_font_size": 16,
-  "ui_font_weight": 500,
-
-  // === POLICE DU CODE ===
-  "buffer_font_family": "JetBrains Mono",
-  "buffer_font_size": 16,
-  "buffer_font_weight": 400,
-  "buffer_line_height": {
-    "custom": 1.6
-  },
-
-  // === LIGATURES & STYLE ===
-  "buffer_font_features": {
-    "calt": true,
-    "liga": true
-  },
-
-  // === CURSEUR ===
-  "cursor_blink": true,
-  "cursor_shape": "underline",
-
-  // === SAUVEGARDE ===
-  "autosave": "on_focus_change",
   "format_on_save": "on",
-
-  // === ÉDITEUR ===
-  "show_whitespaces": "selection",
-  "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 100,
-  "tab_size": 2,
-  "hard_tabs": false,
-  "remove_trailing_whitespace_on_save": true,
-  "ensure_final_newline_on_save": true,
-  "show_wrap_guides": false,
-  "wrap_guides": [80, 100],
-
-  // === SCROLLBAR MINIMALISTE ===
-  "scrollbar": {
-    "show": "auto",
-    "cursors": false,
-    "git_diff": true,
-    "search_results": true,
-    "selected_symbol": false,
-    "diagnostics": "all"
-  },
-
-  // === GUTTER (COLONNE DE GAUCHE) ===
-  "gutter": {
-    "line_numbers": true,
-    "runnables": true,
-    "folds": true
-  },
-
-  // === INDENTATION ===
-  "indent_guides": {
-    "enabled": true,
-    "line_width": 1,
-    "active_line_width": 2,
-    "coloring": "indent_aware",
-    "background_coloring": "disabled"
-  },
-
-  // === INLAY HINTS (ANNOTATIONS INLINE) ===
+  "soft_wrap": "editor_width",
+  "autosave": "on_focus_change",
   "inlay_hints": {
     "enabled": true,
-    "show_type_hints": true,
-    "show_parameter_hints": true,
-    "show_other_hints": true,
-    "edit_debounce_ms": 700,
-    "scroll_debounce_ms": 50
   },
-
-  // === TERMINAL À DROITE ===
-  "terminal": {
-    "dock": "right",
-    "default_width": 450,
-    "font_family": "JetBrains Mono",
-    "font_size": 13,
-    "line_height": {
-      "custom": 1.4
-    },
-    "blinking": "off",
-    "shell": "system",
-    "working_directory": "current_project_directory",
-    "copy_on_select": true
+  "cursor_shape": "underline",
+  "ui_font_size": 15.0,
+  "ui_font_family": "Hiragino Sans",
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "buffer_font_size": 15.0,
+  "buffer_font_family": "Geist Mono",
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true,
   },
-
-  // === BARRE D'ONGLETS ===
-  "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false
+  "icon_theme": {
+    "mode": "system",
+    "light": "JetBrains New UI Icons (Light)",
+    "dark": "JetBrains New UI Icons (Dark)",
   },
-  "tabs": {
-    "file_icons": true,
-    "git_status": true,
-    "close_position": "right"
-  },
-
-  // === PANNEAU PROJET ===
   "project_panel": {
-    "button": true,
-    "dock": "left",
-    "default_width": 240,
-    "indent_size": 16,
-    "auto_reveal_entries": true,
-    "auto_fold_dirs": true,
+    "hide_hidden": false,
+    "hide_root": true,
     "scrollbar": {
-      "show": "never"
+      "show": "never",
     },
+    "auto_fold_dirs": true,
+    "indent_size": 25.0,
     "git_status": true,
-    "file_icons": true
+    "folder_icons": true,
+    "file_icons": true,
+    "entry_spacing": "comfortable",
+    "hide_gitignore": true,
+    "default_width": 240.0,
+    "dock": "left",
   },
-
-  // === PANNEAU OUTLINE ===
-  "outline_panel": {
+  "theme": {
+    "mode": "system",
+    "light": "macOS Classic Light",
+    "dark": "macOS Classic Dark",
+  },
+  "terminal": {
+    "font_family": "JetBrains Mono NL",
+    "line_height": "comfortable",
     "dock": "right",
-    "button": true
+    "default_width": 400,
   },
-
-  // === COLLABORATION ===
-  "collaboration_panel": {
-    "button": false
-  },
-  "notification_panel": {
-    "button": false
-  },
-
-  // === ASSISTANT / AGENT ===
-  /* Duplicated key auto-commented: "agent": {
-    "enabled": true,
-    "button": true,
-    "default_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-20250514"
-    },
-    "version": "2"
-  }, */
-  "agent": {
-    "play_sound_when_agent_done": true
-  },
-
-  // === KEYMAP ===
-  "base_keymap": "VSCode",
-
-  // === RECHERCHE ===
-  "search": {
-    "whole_word": false,
-    "case_sensitive": false,
-    "include_ignored": false,
-    "regex": false
-  },
-
-  // === TELEMETRY (désactivé pour la vie privée) ===
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-
-  // === LSP & DIAGNOSTICS ===
-  "diagnostics": {
-    "include_warnings": true,
-    "inline": {
-      "enabled": true
-    }
-  },
-
-  // === AUTO-UPDATES ===
-  "auto_update": true,
-
-  // === GIT ===
-  "git": {
-    "git_gutter": "tracked_files",
-    "inline_blame": {
-      "enabled": true,
-      "delay_ms": 600
-    }
-  },
-
-  // === JOURNAL (notes quotidiennes) ===
-  "journal": {
-    "path": "~/.zed-journal",
-    "hour_format": "hour24"
-  },
-
-  // === PRÉVISUALISATION ===
-  "preview_tabs": {
-    "enabled": true,
-    "enable_preview_from_file_finder": true,
-    "enable_preview_from_code_navigation": true
-  },
-
-  // === CENTERED LAYOUT (mode zen) ===
-  "centered_layout": {
-    "left_padding": 0.15,
-    "right_padding": 0.15
-  },
-
-  // === ANIMATIONS FLUIDES ===
-  "scroll_sensitivity": 1.0,
-  "vertical_scroll_margin": 5,
-
-  // === FENÊTRE ===
-  "when_closing_with_no_tabs": "keep_window_open",
-  "confirm_quit": true,
-  "restore_on_startup": "last_session",
-
-  // === LANGAGES SPÉCIFIQUES ===
   "languages": {
     "TypeScript": {
-      "tab_size": 2,
-      "format_on_save": "on"
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--write"],
+        },
+      },
     },
-    "JavaScript": {
-      "tab_size": 2,
-      "format_on_save": "on"
+    "TSX": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--write"],
+        },
+      },
     },
-    "Python": {
-      "tab_size": 4,
-      "format_on_save": "on"
-    },
-    "Rust": {
-      "tab_size": 4,
-      "format_on_save": "on"
-    },
-    "JSON": {
-      "tab_size": 2
-    },
-    "YAML": {
-      "tab_size": 2
-    },
-    "Markdown": {
-      "soft_wrap": "editor_width",
-      "show_wrap_guides": false
-    }
   },
-
-  // === LSP ===
-  "lsp": {
-    "rust-analyzer": {
-      "initialization_options": {
-        "checkOnSave": {
-          "command": "clippy"
-        }
-      }
-    }
-  }
 }
