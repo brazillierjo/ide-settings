@@ -1,71 +1,81 @@
 {
-  "format_on_save": "on",
-  "soft_wrap": "editor_width",
-  "autosave": "on_focus_change",
-  "inlay_hints": {
-    "enabled": true,
+  // --- Editor Settings ---
+  // Font settings
+  "editor.fontFamily": "'Monaspace Neon', 'Monaspace Krypton', Menlo, 'Fira Code', Menlo, JetBrains Mono, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
+
+  // Formatting and Saving
+  "editor.formatOnSave": true,
+
+  // Explorer settings
+  "workbench.activityBar.location": "top",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.hidesExplorerArrows": true,
+
+  // Display and Layout
+  "editor.wordWrap": "on", // Wrap long lines
+  "editor.renderWhitespace": "trailing", // Show trailing/leading whitespace
+  "editor.guides.highlightActiveIndentation": true, // Highlight current indentation level
+  "editor.minimap.enabled": false, // Hide the minimap
+  "editor.stickyScroll.enabled": true, // Disable sticky scroll
+
+  // --- File Settings ---
+  "files.autoSave": "onFocusChange", // Auto-save files when focus changes
+  "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
+  "files.insertFinalNewline": true, // Ensure final newline on save
+  "explorer.fileNesting.enabled": true, // Move activity bar to the top
+  "workbench.navigationControl.enabled": false, // Hide navigation controls
+  "workbench.layoutControl.enabled": false, // Hide layout controls
+  "workbench.startupEditor": "none", // Don't open any editor on startup
+
+  // Confirmation Dialogs
+  "explorer.confirmDragAndDrop": false, // Disable drag and drop confirmation
+  "explorer.confirmDelete": false, // Disable delete confirmation
+
+  // --- Terminal Settings ---
+  "terminal.integrated.fontFamily": "Monaspace Krypton",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 3,
+  "terminal.integrated.scrollback": 1000,
+
+  // --- Git Settings ---
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // --- Extension Settings ---
+  // Prettier
+  "prettier.configPath": "prettier.config.js",
+
+  // TypeScript
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // --- Language Specific Settings ---
+  // Default Formatter (using Prettier)
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "cursor_shape": "underline",
-  "ui_font_size": 15.0,
-  "ui_font_family": "Hiragino Sans",
-  "buffer_line_height": "comfortable",
-  "buffer_font_weight": 400.0,
-  "buffer_font_size": 15.0,
-  "buffer_font_family": "Geist Mono",
-  "buffer_font_features": {
-    "calt": true,
-    "liga": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "icon_theme": {
-    "mode": "system",
-    "light": "JetBrains New UI Icons (Light)",
-    "dark": "JetBrains New UI Icons (Dark)",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "project_panel": {
-    "hide_hidden": false,
-    "hide_root": true,
-    "scrollbar": {
-      "show": "never",
-    },
-    "auto_fold_dirs": true,
-    "indent_size": 25.0,
-    "git_status": true,
-    "folder_icons": true,
-    "file_icons": true,
-    "entry_spacing": "comfortable",
-    "hide_gitignore": true,
-    "default_width": 240.0,
-    "dock": "left",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "theme": {
-    "mode": "system",
-    "light": "macOS Classic Light",
-    "dark": "macOS Classic Dark",
+
+  // --- Other ---
+  "json.schemas": [
+    
+  ],
+  "terminal.integrated.stickyScroll.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "terminal": {
-    "font_family": "JetBrains Mono NL",
-    "line_height": "comfortable",
-    "dock": "right",
-    "default_width": 400,
-  },
-  "languages": {
-    "TypeScript": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--write"],
-        },
-      },
-    },
-    "TSX": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--write"],
-        },
-      },
-    },
-  },
+  "workbench.panel.showLabels": false,
+  "claudeCode.preferredLocation": "panel",
 }
