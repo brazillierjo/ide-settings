@@ -1,81 +1,229 @@
 {
-  // --- Editor Settings ---
-  // Font settings
-  "editor.fontFamily": "'Monaspace Neon', 'Monaspace Krypton', Menlo, 'Fira Code', Menlo, JetBrains Mono, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'cv01' 2, 'cv31' 1",
-
-  // Formatting and Saving
-  "editor.formatOnSave": true,
-
-  // Explorer settings
-  "workbench.activityBar.location": "top",
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.hidesExplorerArrows": true,
-
-  // Display and Layout
-  "editor.wordWrap": "on", // Wrap long lines
-  "editor.renderWhitespace": "trailing", // Show trailing/leading whitespace
-  "editor.guides.highlightActiveIndentation": true, // Highlight current indentation level
-  "editor.minimap.enabled": false, // Hide the minimap
-  "editor.stickyScroll.enabled": true, // Disable sticky scroll
-
-  // --- File Settings ---
-  "files.autoSave": "onFocusChange", // Auto-save files when focus changes
-  "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
-  "files.insertFinalNewline": true, // Ensure final newline on save
-  "explorer.fileNesting.enabled": true, // Move activity bar to the top
-  "workbench.navigationControl.enabled": false, // Hide navigation controls
-  "workbench.layoutControl.enabled": false, // Hide layout controls
-  "workbench.startupEditor": "none", // Don't open any editor on startup
-
-  // Confirmation Dialogs
-  "explorer.confirmDragAndDrop": false, // Disable drag and drop confirmation
-  "explorer.confirmDelete": false, // Disable delete confirmation
-
-  // --- Terminal Settings ---
-  "terminal.integrated.fontFamily": "Monaspace Krypton",
-  "terminal.integrated.fontSize": 15,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.cursorWidth": 3,
-  "terminal.integrated.scrollback": 1000,
-
-  // --- Git Settings ---
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autofetch": true,
-
-  // --- Extension Settings ---
-  // Prettier
-  "prettier.configPath": "prettier.config.js",
-
-  // TypeScript
-  "typescript.updateImportsOnFileMove.enabled": "always",
-
-  // --- Language Specific Settings ---
-  // Default Formatter (using Prettier)
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ─── Theme ────────────────────────────────────────────
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light Hard",
+    "dark": "Ayu Dark",
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Macchiato",
   },
 
-  // --- Other ---
-  "json.schemas": [
-    
+  // ─── Typography ───────────────────────────────────────
+  "ui_font_family": "Maple Mono NF",
+  "ui_font_size": 16,
+  "buffer_font_family": "Maple Mono NF",
+  "buffer_font_size": 15,
+  "buffer_font_weight": 400,
+  "buffer_line_height": "comfortable",
+  "buffer_font_features": {
+    "calt": true, // ligatures contextuelles
+    "liga": true, // ligatures standard (=> !== <=)
+    "cv01": true, // variantes styliques (alt @, alt &)
+  },
+
+  // ─── Editor ───────────────────────────────────────────
+  "cursor_shape": "underline",
+  "soft_wrap": "editor_width",
+  "show_whitespaces": "boundary",
+  "tab_size": 2,
+  "format_on_save": "on",
+  "autosave": "on_focus_change",
+  "relative_line_numbers": "disabled",
+
+  // ─── Indent guides ───────────────────────────────────
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+  },
+
+  // ─── Inlay hints ─────────────────────────────────────
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": false,
+    "show_other_hints": true,
+  },
+
+  // ─── Scrollbar (minimal) ─────────────────────────────
+  "scrollbar": {
+    "show": "auto",
+    "cursors": false,
+    "git_diff": true,
+    "search_results": true,
+    "diagnostics": "all",
+  },
+
+  // ─── Tab bar ──────────────────────────────────────────
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+  },
+  "tabs": {
+    "close_position": "right",
+    "git_status": true,
+    "file_icons": true,
+  },
+
+  // ─── Toolbar (clean) ─────────────────────────────────
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false,
+    "selections_menu": false,
+  },
+
+  // ─── Panels ───────────────────────────────────────────
+  "project_panel": {
+    "dock": "left",
+    "default_width": 220,
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "indent_size": 20,
+    "auto_fold_dirs": true,
+    "hide_root": true,
+    "hide_hidden": false,
+    "hide_gitignore": false,
+    "entry_spacing": "comfortable",
+    "scrollbar": { "show": "never" },
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "notification_panel": {
+    "dock": "left",
+  },
+
+  // ─── Git ──────────────────────────────────────────────
+  "git": {
+    "inline_blame": {
+      "enabled": true,
+      "delay_ms": 800,
+    },
+  },
+
+  // ─── Terminal ─────────────────────────────────────────
+  "terminal": {
+    "font_family": "Maple Mono NF",
+    "font_size": 13,
+    "line_height": "comfortable",
+    "dock": "bottom",
+    "default_height": 320,
+    "toolbar": { "breadcrumbs": false },
+    "detect_venv": {
+      "on": {
+        "directories": [".venv", "venv", ".env", "env"],
+        "activate_script": "default",
+      },
+    },
+  },
+
+  // ─── Centered layout (focused coding) ────────────────
+  "centered_layout": {
+    "left_padding": 0.12,
+    "right_padding": 0.12,
+  },
+
+  // ─── Telemetry ────────────────────────────────────────
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+
+  // ─── File scan exclusions ─────────────────────────────
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/node_modules",
+    "**/dist",
+    "**/build",
+    "**/.expo",
+    "**/.next",
+    "**/android",
+    "**/ios/Pods",
+    "**/.turbo",
   ],
-  "terminal.integrated.stickyScroll.enabled": false,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ─── Language-specific ────────────────────────────────
+  "languages": {
+    "TypeScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--write"],
+        },
+      },
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+      },
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--write"],
+        },
+      },
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+      },
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--write"],
+        },
+      },
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--write"],
+        },
+      },
+    },
+    "Python": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "ruff",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}"],
+        },
+      },
+      "tab_size": 4,
+    },
+    "Markdown": {
+      "soft_wrap": "editor_width",
+      "format_on_save": "off",
+    },
   },
-  "workbench.panel.showLabels": false,
-  "claudeCode.preferredLocation": "panel",
+
+  // ─── Auto-install extensions ──────────────────────────
+  "auto_install_extensions": {
+    "catppuccin-icons": true,
+    "html": true,
+    "toml": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "git-firefly": true,
+    "csv": true,
+    "sql": true,
+    "ruff": true,
+  },
 }
